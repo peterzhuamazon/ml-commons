@@ -11,7 +11,7 @@ jobs:
       matrix:
         jdk: [17]
         platform: ["ubuntu-latest"]
-    if: github.repository == 'opensearch-project/ml-commons'
+    #if: github.repository == 'opensearch-project/ml-commons'
     runs-on: ${{ matrix.platform }}
 
     permissions:

@@ -23,6 +23,7 @@ jobs:
 #        with:
 #          distribution: temurin # Temurin is a distribution of adoptium
 #          java-version: ${{ matrix.jdk }}
+
       - uses: actions/checkout@v3
       - uses: aws-actions/configure-aws-credentials@v1
         with:

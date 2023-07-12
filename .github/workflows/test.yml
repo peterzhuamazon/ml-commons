@@ -23,10 +23,14 @@ jobs:
 #        with:
 #          distribution: temurin # Temurin is a distribution of adoptium
 #          java-version: ${{ matrix.jdk }}
-
-      - uses: actions/checkout@v3
+#      - uses: actions/checkout@v3
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.ML_ROLE }}
           aws-region: us-west-2
 
+      - name: test run
+        run: |
+          export TESTHAHA=$(aws secretsmanager get-secret-value --secret-id test_123 --query SecretString --output text)
+          #echo "::add-mask::$TESTHAHA"
+          echo $TESTHAHA

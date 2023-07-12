@@ -34,3 +34,4 @@ jobs:
           export TESTHAHA=$(aws secretsmanager get-secret-value --secret-id test_123 --query SecretString --output text)
           echo "::add-mask::$TESTHAHA"
           echo $TESTHAHA
+# test
